@@ -1,0 +1,145 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@900&display=swap');
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+a,
+p {
+    font-family: 'Roboto', sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    font-weight: 900;
+}
+
+h5,
+h6,
+a,
+p {
+    font-weight: 300;
+}
+
+
+.center-vertical {
+    display: flex;
+    width: 100%;
+    min-height: 100vh;
+    align-items: center;
+}
+
+.about-us-section {
+    width: 100%;
+    padding: calc(5% + 30px) 0px;
+} */
+
+.about-us-container {
+    padding: 30px 0px;
+}
+
+.heading {
+    padding-bottom: 20px;
+    text-align: center;
+    position: relative;
+}
+
+.line {
+    width: 100px;
+    height: 2px;
+    background-color: #009970;
+    margin: 10px auto;
+}
+
+.container {
+    width: 90%;
+    margin: 0 auto;
+    padding: 10px 20px;
+}
+
+.about {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    flex-wrap: wrap;
+}
+
+.about-image {
+    flex: 1;
+    margin-right: 40px;
+    overflow: hidden;
+}
+
+.about-image img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    transition: 0.5s ease;
+}
+
+.about-image:hover img {
+    transform: scale(1.2);
+}
+
+.about-content {
+    flex: 1;
+    padding: 10px 30px;
+}
+
+.about-content p {
+    font-size: 18px;
+    line-height: 1.5;
+    color: #666;
+}
+
+.about-content a {
+    background-color: #009970;
+    color: white;
+    font-size: 17px;
+    padding: 8px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: 0.4s background-color;
+}
+
+.about-content a:hover{
+    background-color: #02b887;    
+}
+
+@media screen and (max-width : 768px) {
+    .heading {
+        padding: 0px 20px;
+    }
+
+    .heading p {
+        font-size: 17px;
+        margin-bottom: 0px;
+    }
+
+    .container {
+        padding: 0px;
+    }
+
+    .about {
+        padding: 20px;
+        flex-direction: column;
+    }
+
+    .about-image {
+        margin-right: 0px;
+        margin-bottom: 20px;
+    }
+
+    .about-content p {
+        padding: 0px;
+        font-size: 16px;
+    }
+
+    .about-content .read-more {
+        font-size: 16px;
+    }
+}

@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+.super-admin,
+::after,
+::before {
+    box-sizing: border-box;
+}
+
+.super-admin {
+    /* background: rgb(14, 13, 12); */
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.87rem;
+    opacity: 1;
+    /* overflow-y: scroll; */
+    margin: 0;
+}
+
+.super-admin .wrapper {
+    align-items: stretch;
+    display: flex;
+    width: 100%;
+}
+
+.super-admin .wrapper .main-area {
+    width: 100%;
+}
