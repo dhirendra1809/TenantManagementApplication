@@ -12,7 +12,7 @@ export default function Header({ page }) {
             <nav className="navbar bg-body-tertiary navbar-expand-lg" style={{ padding: "10px 20px" }}>
                 <div className="container-fluid">
                     <a className="navbar-brand me-auto" href="#">LOGO</a>
-                    <div className="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+                    <div className="offcanvas offcanvas-end" tabIndex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
                         <div className="offcanvas-header">
                             <h5 className="offcanvas-title" id="offcanvasNavbarLabel">LOGO</h5>
                             <button type="button" style={{ border: "none", boxShadow: "none", outline: "none" }} className="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>

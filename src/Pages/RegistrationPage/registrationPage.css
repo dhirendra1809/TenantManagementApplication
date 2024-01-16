@@ -83,6 +83,10 @@
     margin: 4px 0;
 }
 
+#registration-block .registration-body .container .form .fields .field-address {
+    width: 100%;
+}
+
 #registration-block .registration-body .container .form .file-upload-area .input-field {
     display: flex;
     width: calc(100% / 2 - 15px);

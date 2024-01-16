@@ -12,7 +12,7 @@ export default function Sidebar({ isCollapsed }) {
 
     return (
         <>
-            <aside id='sidebar' class="js-sidebar">
+            <aside id='sidebar' className="js-sidebar">
                 <div className='h-100'>
                     <div className='sidebar-logo'>
                         <a href='#'> LOGO </a>
