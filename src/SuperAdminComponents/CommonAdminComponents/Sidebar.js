@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import '../Css/Sidebar.css'
+import { Link } from 'react-router-dom'
 
 export default function Sidebar({ isCollapsed }) {
 
@@ -22,31 +23,28 @@ export default function Sidebar({ isCollapsed }) {
                             Admin Element
                         </li>
                         <li className="sidebar-item">
-                            <a href="#" className="sidebar-link">
-                                <i className="fa fa-solid fa-list pe-2"></i>
+                            <Link to={"/super-admin"} className="sidebar-link">
+                                <i className="fa fa-solid fa-circle-info pe-2"></i>
                                 Dashboard
-                            </a>
+                            </Link>
                         </li>
                         <li className="sidebar-item">
-                            <a href="#" className="sidebar-link collapsed" data-bs-target="#pages" data-bs-toggle="collapse"
-                                aria-expanded="false"><i className="fa fa-solid fa-file-lines pe-2"></i>
-                                Pages
-                            </a>
-                            <ul id="pages" className="sidebar-dropdown list-unstyled collapse" data-bs-parent="#sidebar">
+                            <Link to={"/register-by-admin"} className="sidebar-link collapsed" ><i class="fa fa-regular fa-registered pe-2"></i>Client Registration</Link>
+                            {/* <ul id="pages" className="sidebar-dropdown list-unstyled collapse" data-bs-parent="#sidebar">
                                 <li className="sidebar-item">
                                     <a href="#" className="sidebar-link">Page 1</a>
                                 </li>
                                 <li className="sidebar-item">
                                     <a href="#" className="sidebar-link">Page 2</a>
                                 </li>
-                            </ul>
+                            </ul> */}
                         </li>
                         <li className="sidebar-item">
-                            <a href="#" className="sidebar-link collapsed" data-bs-target="#posts" data-bs-toggle="collapse"
-                                aria-expanded="false"><i className="fa fa-solid fa-sliders pe-2"></i>
-                                Posts
-                            </a>
-                            <ul id="posts" className="sidebar-dropdown list-unstyled collapse" data-bs-parent="#sidebar">
+                            <Link to={"/clients-list"} className="sidebar-link collapsed" data-bs-target="#posts"
+                                aria-expanded="false"><i className="fa fa-solid fa-list pe-2"></i>
+                                List Of Clients
+                            </Link>
+                            {/* <ul id="posts" className="sidebar-dropdown list-unstyled collapse" data-bs-parent="#sidebar">
                                 <li className="sidebar-item">
                                     <a href="#" className="sidebar-link">Posts 1</a>
                                 </li>
@@ -56,9 +54,25 @@ export default function Sidebar({ isCollapsed }) {
                                 <li className="sidebar-item">
                                     <a href="#" className="sidebar-link">Posts 3</a>
                                 </li>
-                            </ul>
+                            </ul> */}
                         </li>
                         <li className="sidebar-item">
+                            <Link to={"/clients-list"} className="sidebar-link collapsed" data-bs-target="#multi" data-bs-toggle="collapse" aria-expanded="false"><i className="fa fa-solid fa-sliders pe-2"></i>
+                                Setting
+                            </Link>
+                            <ul id="multi" className="sidebar-dropdown list-unstyled collapse" data-bs-parent="#sidebar">
+                                <li className="sidebar-item">
+                                    <a href="#" className="sidebar-link">Configuration</a>
+                                </li>
+                                <li className="sidebar-item">
+                                    <a href="#" className="sidebar-link">Licence </a>
+                                </li>
+                                <li className="sidebar-item">
+                                    <a href="#" className="sidebar-link"> BPM </a>
+                                </li>
+                            </ul>
+                        </li>
+                        {/* <li className="sidebar-item">
                             <a href="#" className="sidebar-link collapsed" data-bs-target="#auth" data-bs-toggle="collapse"
                                 aria-expanded="false"><i className="fa fa-regular fa-user pe-2"></i>
                                 Auth
@@ -100,7 +114,7 @@ export default function Sidebar({ isCollapsed }) {
                                     </ul>
                                 </li>
                             </ul>
-                        </li>
+                        </li> */}
                     </ul>
                 </div>
             </aside>

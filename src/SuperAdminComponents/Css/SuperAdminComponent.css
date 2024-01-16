@@ -23,4 +23,192 @@
 
 .super-admin .wrapper .main-area {
     width: 100%;
+    background-color: var(--bs-dark-bg-subtle);
+}
+
+.super-admin .wrapper .main-area .main {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    min-width: 0;
+    overflow: hidden;
+    /* transition: all 0.35s ease-in-out; */
+    width: 100%;
+    background-color: var(--bs-dark-bg-subtle);
+}
+
+.super-admin .wrapper .main-area .main .content {
+    flex: 1;
+    max-width: 100vw;
+    width: 100vm;
+}
+
+/*  CSS For the Common Card Type Main Body */
+
+.super-admin .wrapper .main-area .main .content .card-body-area {
+    background-color: "#f1f1f1";
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+}
+
+.super-admin .wrapper .main-area .main .content .card-body-area .card-title {
+    text-align: center;
+    font-weight: 100;
+    font-size: 30px;
+    color: #333;
+    font-family: 'Poppins', sans-serif;
+    margin: 25px 0px;
+    position: relative;
+}
+
+.super-admin .wrapper .main-area .main .content .card-body-area .card-title::before {
+    content: "";
+    position: absolute;
+    /* left: 0; */
+    bottom: -10px;
+    height: 4px;
+    width: 90px;
+    border-radius: 10px;
+    background-color: #212529;
+}
+
+.super-admin .wrapper .main-area .main .content .card-body-area .card-body {
+    margin-top: 0px;
+}
+
+/*  CSS For the Registration at the Admin Side */
+
+
+.super-admin .wrapper .main-area .main .content .card-body-area .card-body .form .details {
+    margin-top: 30px;
+}
+
+.super-admin .wrapper .main-area .main .content .card-body-area .card-body .form .ID {
+    margin-top: 10px;
+}
+
+.super-admin .wrapper .main-area .main .content .card-body-area .card-body .form .title {
+    font-size: 15px;
+    display: block;
+    margin-bottom: 8px 0;
+    font-weight: 600;
+    margin: 6px 0;
+    color: #333;
+}
+
+.super-admin .wrapper .main-area .main .content .card-body-area .card-body .form .fields,
+.super-admin .wrapper .main-area .main .content .card-body-area .card-body .form .file-upload-area {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.super-admin .wrapper .main-area .main .content .card-body-area .form .fields .input-field {
+    display: flex;
+    width: calc(100% / 3 - 15px);
+    flex-direction: column;
+    margin: 4px 0;
+}
+
+.super-admin .wrapper .main-area .main .content .card-body-area .form .file-upload-area .input-field {
+    display: flex;
+    width: calc(100% / 2 - 15px);
+    flex-direction: column;
+    margin: 4px 0;
+}
+
+.super-admin .wrapper .main-area .main .content .card-body-area .form .fields .field-address {
+    width: 100%;
+}
+
+.super-admin .wrapper .main-area .main .content .card-body-area .form .fields .input-field label,
+.super-admin .wrapper .main-area .main .content .card-body-area .form .file-upload-area .input-field label {
+    font-size: 12px;
+    font-weight: 500;
+    color: #2e2e2e;
+}
+
+.super-admin .wrapper .main-area .main .content .form .fields .input-field input,
+.super-admin .wrapper .main-area .main .content .form .file-upload-area .input-field input {
+    outline: none;
+    font-size: 14px;
+    color: #333;
+    font-weight: 300;
+    border: 1px solid #aaa;
+    border-radius: 4px;
+    /* padding: 0 15px; */
+    height: 40px;
+    margin: 8px 0;
+
+}
+
+.super-admin .wrapper .main-area .main .content .card-body-area .form .fields .input-field input {
+    padding: 0 15px;
+}
+
+.super-admin .wrapper .main-area .main .content .card-body-area .form .fields .input-field input:is(:focus, :valid) {
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.3);
+}
+
+.super-admin .wrapper .main-area .main .content .card-body-area .file-upload-area .input-field input[type="file"]::-webkit-file-upload-button {
+    display: inline-block;
+    padding: 10px 30px;
+    margin-right: 25px;
+    background-color: #333;
+    color: white;
+    cursor: pointer;
+    border: none;
+    /* border-radius: 5px; */
+}
+
+.super-admin .wrapper .main-area .main .content .card-body-area .form .submit-btn {
+    display: flex;
+    margin: 25px 0;
+    align-items: center;
+    justify-content: center;
+    height: 40px;
+    border: none;
+    border-radius: 5px;
+    background-color: #333;
+    width: 100%;
+    max-width: 150px;
+    transition: 0.3s ease-in-out background-color;
+}
+
+.super-admin .wrapper .main-area .main .content .card-body-area .form .submit-btn:hover {
+    background-color: #333;
+}
+
+.super-admin .wrapper .main-area .main .content .card-body-area .form .submit-btn .btnText {
+    color: white;
+}
+
+@media (max-width : 750px) {
+    .super-admin .wrapper .main-area .main .content .card-body-area .form .fields .input-field {
+        width: calc(100% / 2 - 15px);
+    }
+
+    .super-admin .wrapper .main-area .main .content .card-body-area .form {
+        overflow-y: scroll;
+    }
+
+    .super-admin .wrapper .main-area .main .content .card-body-area .form::-webkit-scrollbar {
+        display: none;
+    }
+}
+
+@media (max-width : 550px) {
+
+    .super-admin .wrapper .main-area .main .content .card-body-area .form .fields .input-field,
+    .super-admin .wrapper .main-area .main .content .card-body-area .form .file-upload-area .input-field {
+        width: calc(100% / 1 - 15px);
+    }
+
+    .super-admin .wrapper .main-area .main .content .card-body-area .form {
+        overflow-y: scroll;
+    }
+
+    .super-admin .wrapper .main-area .main .content .card-body-area .form::-webkit-scrollbar {
+        display: none;
+    }
 }

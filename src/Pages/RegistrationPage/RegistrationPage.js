@@ -6,7 +6,6 @@ import Hero from '../Components/Hero'
 import Footer from '../../HomePageComponent/Footer/Footer'
 
 export default function RegistrationPage() {
-
   const [registrationDetails, setRegistrationDetails] = useState({
     regNo: "",
     orgName: "",
@@ -80,13 +79,7 @@ export default function RegistrationPage() {
     for (const key of form.entries()) {
       console.log(key[0] + " = " + key[1])
     }
-
-
-
-
   }
-
-
   return (
     <>
       <Header />
@@ -96,7 +89,7 @@ export default function RegistrationPage() {
           <div className='container'>
             <header>Registration</header>
             <div>
-              <div className='form first'>
+              <div className='form'>
                 <div className='details personal'>
                   <span className='title'>Organisation Details</span>
                   <div className='fields'>

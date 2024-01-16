@@ -42,61 +42,61 @@ p {
     padding: 30px 0px;
 }
 
-.heading {
+.about-us-container .heading {
     padding-bottom: 20px;
     text-align: center;
     position: relative;
 }
 
-.line {
+.about-us-container .line {
     width: 100px;
     height: 2px;
     background-color: #009970;
     margin: 10px auto;
 }
 
-.container {
+.about-us-container .container {
     width: 90%;
     margin: 0 auto;
     padding: 10px 20px;
 }
 
-.about {
+.about-us-container .about {
     display: flex;
     justify-content: space-between;
     align-items: stretch;
     flex-wrap: wrap;
 }
 
-.about-image {
+.about-us-container .about-image {
     flex: 1;
     margin-right: 40px;
     overflow: hidden;
 }
 
-.about-image img {
+.about-us-container .about-image img {
     max-width: 100%;
     height: auto;
     display: block;
     transition: 0.5s ease;
 }
 
-.about-image:hover img {
+.about-us-container .about-image:hover img {
     transform: scale(1.2);
 }
 
-.about-content {
+.about-us-container .about-content {
     flex: 1;
     padding: 10px 30px;
 }
 
-.about-content p {
+.about-us-container .about-content p {
     font-size: 18px;
     line-height: 1.5;
     color: #666;
 }
 
-.about-content a {
+.about-us-container .about-content a {
     background-color: #009970;
     color: white;
     font-size: 17px;
@@ -106,40 +106,40 @@ p {
     transition: 0.4s background-color;
 }
 
-.about-content a:hover{
+.about-us-container .about-content a:hover{
     background-color: #02b887;    
 }
 
 @media screen and (max-width : 768px) {
-    .heading {
+    .about-us-container .heading {
         padding: 0px 20px;
     }
 
-    .heading p {
+    .about-us-container .heading p {
         font-size: 17px;
         margin-bottom: 0px;
     }
 
-    .container {
+    .about-us-container .container {
         padding: 0px;
     }
 
-    .about {
+    .about-us-container .about {
         padding: 20px;
         flex-direction: column;
     }
 
-    .about-image {
+    .about-us-container .about-image {
         margin-right: 0px;
         margin-bottom: 20px;
     }
 
-    .about-content p {
+    .about-us-container .about-content p {
         padding: 0px;
         font-size: 16px;
     }
 
-    .about-content .read-more {
+    .about-us-container .about-content .read-more {
         font-size: 16px;
     }
 }
