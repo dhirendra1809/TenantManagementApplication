@@ -123,7 +123,7 @@ public class OrgImpService {
                 acttoken);
         try {
             eMail.sendEmail(tenantRegistrationDto.getOrgEmailId(), subject1, formattedtext);
-            eMail.sendEmail(tenantRegistrationDto.getNodalOfficerEmailId(), subject1, formattedtext);
+            // eMail.sendEmail(tenantRegistrationDto.getNodalOfficerEmailId(), subject1, formattedtext);
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -139,7 +139,7 @@ public class OrgImpService {
         Optional<List<TenantDetails>> tdOptional = tenantDetailRepository.findByActivationToken(token);
         if (tdOptional.isPresent()) {
             TenantDetails td = tdOptional.get().get(0);
-            td.setActivationToken("E-Mail Verified".toLowerCase().replace("", "_"));
+            td.setActivationToken("E-Mail Verified".toLowerCase().replace(" ", "_"));
             tenantDetailRepository.save(td);
             String formattedtext = MessageFormat.format(bodytext2, tdOptional.get().get(0).getOrgName());
             try {
