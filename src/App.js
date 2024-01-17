@@ -4,11 +4,11 @@ import { Route, Routes } from "react-router-dom";
 import HomePageComponent from "./HomePageComponent/HomePageComponent";
 import ClientsLoginPage from "./Pages/ClientLoginPage/ClientsLoginPage";
 import RegistrationPage from "./Pages/RegistrationPage/RegistrationPage";
-import Header from "./HomePageComponent/Header/Header";
 import RegistrationByAdmin from "./SuperAdminComponents/Components/RegistrationByAdmin";
 import ListOfClients from "./SuperAdminComponents/Components/ListOfClients";
 
 function App() {
+  
   return (
     <>
       <Routes>

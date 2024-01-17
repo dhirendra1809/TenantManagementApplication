@@ -1,12 +1,56 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import '../Css/SuperAdminComponent.css'
 import Sidebar from '../CommonAdminComponents/Sidebar'
 import Navbar from '../CommonAdminComponents/Navbar'
 import Footer from '../CommonAdminComponents/Footer'
 import DataTable from 'react-data-table-component'
+import services from '../../Services/services'
 
 export default function ListOfClients() {
 
+    useEffect(() => {
+        getAllClientList();
+    }, [])
+
+    const [clientList, setClientList] = useState();
+
+    const getAllClientList = () => {
+        services.getAllClientList().then((resp) => {
+            if (resp.status === 200) {
+                setClientList(resp.data);
+            }
+        }).catch((error) => {
+
+        })
+    }
+
+    const column = [
+        {
+            name: "S.No",
+            selector: (row, index) => index = index + 1,
+        },
+        {
+            name: "Organisation Name",
+            selector: (row) => row?.orgName
+
+        },
+        {
+            name: "Email-ID",
+            selector: (row) => row?.orgEmailId,
+        },
+        {
+            name: "Nodal Officer Name",
+            selector: (row) => row?.orgNodalOfficerName,
+        },
+        {
+            name: "Nodal Officer Name",
+            selector: (row) =>
+                <>
+                    <button className='btn btn-primary'>Click here</button>
+                </>
+        },
+
+    ]
 
 
 
@@ -29,7 +73,10 @@ export default function ListOfClients() {
                                             <h4 className='card-title'>Clients List</h4>
                                             <div className='card-body d-flex flex-fill'>
                                                 <div className='container'>
-                                                   <DataTable/>
+                                                    <DataTable
+                                                        columns={column}
+                                                        data={clientList}
+                                                    />
 
                                                 </div>
                                             </div>

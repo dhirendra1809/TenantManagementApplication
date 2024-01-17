@@ -104,6 +104,7 @@
 }
 
 .super-admin .wrapper .main-area .main .content .card-body-area .form .fields .input-field {
+    overflow-wrap: anywhere;
     display: flex;
     width: calc(100% / 3 - 15px);
     flex-direction: column;
@@ -111,6 +112,7 @@
 }
 
 .super-admin .wrapper .main-area .main .content .card-body-area .form .file-upload-area .input-field {
+    overflow-wrap: anywhere;
     display: flex;
     width: calc(100% / 2 - 15px);
     flex-direction: column;
@@ -129,7 +131,7 @@
 }
 
 .super-admin .wrapper .main-area .main .content .form .fields .input-field input,
-.super-admin .wrapper .main-area .main .content .form .file-upload-area .input-field input {
+.super-admin .wrapper .main-area .main .content .form .file-upload-area .input-field input  {
     outline: none;
     font-size: 14px;
     color: #333;
@@ -140,6 +142,25 @@
     height: 40px;
     margin: 8px 0;
 
+}
+
+.super-admin .wrapper .main-area .main .content .form .fields span ,
+.super-admin .wrapper .main-area .main .content .form .file-upload-area span {
+    color: red;
+    font-size: 10px;
+}
+
+.super-admin .wrapper .main-area .main .content .form .fields .input-field select {
+    outline: none;
+    font-size: 14px;
+    padding: 0px 15px;
+    color: #333;
+    font-weight: 300;
+    border: 1px solid #aaa;
+    border-radius: 4px;
+    /* padding: 0 15px; */
+    height: 40px;
+    margin: 8px 0;
 }
 
 .super-admin .wrapper .main-area .main .content .card-body-area .form .fields .input-field input {

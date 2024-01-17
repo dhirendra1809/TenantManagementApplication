@@ -32,3 +32,7 @@
 .card-image {
     height: 300px;
 }
+
+#client-login-area .container {
+    min-height: 720px;
+}

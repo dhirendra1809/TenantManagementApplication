@@ -1,0 +1,1 @@
+export const TenantService = "http://10.244.2.238:8099";
