@@ -123,7 +123,8 @@ public class OrgImpService {
                 acttoken);
         try {
             eMail.sendEmail(tenantRegistrationDto.getOrgEmailId(), subject1, formattedtext);
-            // eMail.sendEmail(tenantRegistrationDto.getNodalOfficerEmailId(), subject1, formattedtext);
+            // eMail.sendEmail(tenantRegistrationDto.getNodalOfficerEmailId(), subject1,
+            // formattedtext);
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -307,6 +308,7 @@ public class OrgImpService {
         for (TenantDetails tenantDetails : tdOptional.get()) {
             Optional<TenantMaster> otm = tenantMasterRepo.findByRegNo(tenantDetails.getRegNo());
             TenantDetailApproveDto tenantDetailApproveDto = new TenantDetailApproveDto();
+            tenantDetailApproveDto.setOrgName(tenantDetails.getOrgName());
             tenantDetailApproveDto.setRegNo(tenantDetails.getRegNo());
             tenantDetailApproveDto.setOrgRealm(otm.get().getRealmId());
             tenantDetailApproveDto.setOrgClient(otm.get().getClientId());
@@ -390,8 +392,10 @@ public class OrgImpService {
                         tm.setLoginUrl(otd.get().getOrgWebsiteUrl());
                         // tm.setPasswordChangeUrl("");
                         tm.setStatus("approve");
-                        tm.setValidFrom(new Timestamp(dateFormat.parse(tenantMasterDto.getValidFrom()).getTime()));
-                        tm.setValidUpto(new Timestamp(dateFormat.parse(tenantMasterDto.getValidUpto()).getTime()));
+                        // tm.setValidFrom(new
+                        // Timestamp(dateFormat.parse(tenantMasterDto.getValidFrom()).getTime()));
+                        // tm.setValidUpto(new
+                        // Timestamp(dateFormat.parse(tenantMasterDto.getValidUpto()).getTime()));
                         tm.setRegNo(id);
                         tenantMasterRepo.save(tm);
                         return "success";
@@ -472,8 +476,8 @@ public class OrgImpService {
         realmsDtos.setFirstName(tenantDetails.getOrgNodalOfficerName());
 
         // First creating the Realm
-        String realmCreationStation = keycloakAdminClientService.createNewRealm(realmsDtos);
-        System.out.println(realmCreationStation);
+        String realmCreationStatus = keycloakAdminClientService.createNewRealm(realmsDtos);
+        System.out.println(realmCreationStatus);
 
         // Second Creating the Client
         String clientCreationStatus = keycloakAdminClientService.createClient(realmsDtos);
@@ -484,13 +488,17 @@ public class OrgImpService {
         System.out.println(clientRoleCreationStatus);
 
         // Creating the admin User and assigning the role - learner , admin
-        if (realmCreationStation.equals("Success") && clientCreationStatus.equals("Success")
+        if (realmCreationStatus.equals("Success") && clientCreationStatus.equals("Success")
                 && clientRoleCreationStatus.equals("Success")) {
             String userCreation = keycloakAdminClientService.addNewAdmin(realmsDtos);
-            return userCreation.equals("NEW_ADMIN_CREATED") ? "success" : "fail";
+            if (userCreation.equals("NEW_ADMIN_CREATED")) {
+                return "success";
+            } else {
+                keycloakAdminClientService.removeRealm(realmsDtos);
+                return "fail";
+            }
         } else {
             // if any of the above fail revert back all
-            keycloakAdminClientService.removeRealm(realmsDtos);
             return "fail";
         }
 

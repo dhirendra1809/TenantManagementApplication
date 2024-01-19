@@ -146,8 +146,10 @@ public class OrgController {
     }
 
     @PostMapping(value = "/approve/{id}")
-    public ResponseEntity<?> onSuperAdminApproval(@RequestBody TenantMasterDto tenantMasterDto,
+    public ResponseEntity<?> onSuperAdminApproval(
+            // @RequestBody TenantMasterDto tenantMasterDto,
             @PathVariable("id") int id) {
+        TenantMasterDto tenantMasterDto = new TenantMasterDto();
         tenantMasterDto.setStatus("approve");
         return ResponseEntity.status(HttpStatus.OK).body(orgImpService.changeStatusByAdmin(id, tenantMasterDto));
     }

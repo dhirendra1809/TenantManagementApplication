@@ -7,6 +7,8 @@ import lombok.Data;
 @Data
 public class TenantDetailApproveDto {
 
+    private String orgName;
+
     private int regNo;
 
     private String orgRealm;
