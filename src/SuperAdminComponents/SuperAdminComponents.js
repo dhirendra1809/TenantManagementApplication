@@ -11,12 +11,14 @@ import Footer from './CommonAdminComponents/Footer';
 export default function SuperAdminComponents() {
     return (
         <div className='super-admin'>
-            <div className='wrapper'>
-                <Sidebar />
-                <div className='main-area'>
-                    <Navbar />
-                    <Main />
-                    <Footer />
+            <div>
+                <div className='wrapper'>
+                    <Sidebar />
+                    <div className='main-area'>
+                        <Navbar />
+                        <Main />
+                        <Footer />
+                    </div>
                 </div>
             </div>
         </div>

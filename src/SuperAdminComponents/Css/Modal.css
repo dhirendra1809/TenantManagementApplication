@@ -1,0 +1,54 @@
+.modal-content .modal-area {
+    background-color: var(--bs-dark);
+}
+
+.modal-content .modal-area .modal-header {
+    display: inline;
+    color: white;
+    text-align: center;
+    border-bottom: none;
+}
+
+.modal-content .modal-area .line {
+    width: 100px;
+    height: 2px;
+    background-color: #d9dbdb;
+    margin: 10px auto;
+}
+
+
+.modal-content .modal-area .modal-footer {
+    border-top: none;
+}
+
+.modal-content .modal-area .modal-body .modal-body-clientList {
+    padding: 10px 30px;
+    color: white;
+}
+
+.modal-content .modal-area .modal-body .modal-body-clientList h6 {
+
+}
+
+.modal-content .modal-area .modal-body .modal-body-clientList button {
+    background-color: rgb(95, 9, 9);
+    color: white;
+    border: none;
+    border-radius: 2px;
+    padding: 5px 20px;
+    transition: 0.4s ease-in-out ;
+}
+
+.modal-content .modal-area .modal-body .modal-body-clientList button:hover {
+    background-color: rgb(148, 17, 17);
+   
+}
+
+.modal-content .modal-area .modal-body .modal-body-clientList p {
+    font-weight: 100;
+}
+
+
+.modal-content .modal-area .modal-body {
+    font-weight: 600;
+}

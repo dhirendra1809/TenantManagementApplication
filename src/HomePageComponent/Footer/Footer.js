@@ -1,6 +1,7 @@
 
 import React from 'react'
 import './footer.css'
+import { Link } from 'react-router-dom'
 
 export default function Footer() {
     return (
@@ -39,8 +40,8 @@ export default function Footer() {
                                     <h5 className='text-uppercase mb-4 font-weight-bold'>UseFul Links</h5>
                                     <div className='footer-heading-line'></div>
                                     <div className='useful-link-content'>
-                                        <li><a href='#'>CDAC (Center for Development of Advance Compunting)</a></li>
-                                        <li><a href='#'>Meghsikshak</a></li>
+                                        <li><Link>CDAC (Center for Development of Advance Computing)</Link></li>
+                                        <li><Link>Meghsikshak</Link></li>
                                     </div>
                                 </div>
                             </div>
@@ -50,11 +51,11 @@ export default function Footer() {
                 <div className='footer-line'></div>
                 <div className='copyright-area' >
                     <h5>Copyright © 2024 | Powered By MeghSikshak , Centre for Development of Advanced Computing(C-DAC)</h5>
-                    <a href="#"><i className="fa-brands fa-square-facebook"></i></a>
-                    <a href="#"><i className="fa-brands fa-square-x-twitter"></i></a>
-                    <a href="#"><i className="fa-brands fa-youtube"></i></a>
-                    <a href="#"><i className="fa-brands fa-linkedin"></i></a>
-                    <a href="#"><i className="fa-brands fa-square-instagram"></i></a>
+                    <Link><i className="fa-brands fa-square-facebook"></i></Link>
+                    <Link><i className="fa-brands fa-square-x-twitter"></i></Link>
+                    <Link><i className="fa-brands fa-youtube"></i></Link>
+                    <Link><i className="fa-brands fa-linkedin"></i></Link>
+                    <Link><i className="fa-brands fa-square-instagram"></i></Link>
                 </div>
             </div>
         </>

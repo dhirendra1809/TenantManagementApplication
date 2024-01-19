@@ -1,6 +1,7 @@
 import React from 'react'
 
 import '../Css/Footer.css'
+import { Link } from 'react-router-dom'
 
 export default function Footer() {
     return (
@@ -16,15 +17,15 @@ export default function Footer() {
                         <div className='col-6 text-end'>
                             <ul className='list-inline'>
                                 <li className='list-inline-item'>
-                                    <a href="#" className='text-muted'>
+                                    <Link  className='text-muted'>
                                         <strong>Contact</strong>
-                                    </a>
-                                    <a href="#" className='text-muted'>
+                                    </Link>
+                                    <Link className='text-muted'>
                                         <strong>About Us</strong>
-                                    </a>
-                                    <a href="#" className='text-muted'>
+                                    </Link>
+                                    <Link className='text-muted'>
                                         <strong>Terms</strong>
-                                    </a>
+                                    </Link>
                                 </li>
                             </ul>
                         </div>

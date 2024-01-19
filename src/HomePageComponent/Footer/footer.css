@@ -1,11 +1,11 @@
-.footer-heading-line {
+.footer-area .footer-heading-line {
     width: 50%;
     height: 2px;
     background-color: #009970;
     margin: 10px auto;
 }
 
-.contact-us-content i {
+.footer-area .contact-us-content i {
     font-size: 25px;
     color: #009970;
     width: 90px;
@@ -26,33 +26,32 @@
     }
 }
 
-.contact-us-content p {
+.footer-area .contact-us-content p {
     font-size: 15px;
     text-align: justify;
 }
 
-li {
+.footer-area li {
     list-style-type: none;
     margin: 15px 0px;
 }
 
-li a {
+.footer-area li a {
     color: rgb(107, 107, 107);
     font-weight: 500;
     text-decoration: none;
     transition: 0.3s color;
 }
 
-li a:hover {
+.footer-area li a:hover {
     color: #009970;
 
 }
 
-.contact-us-content,
-.contact-us-content {
+.footer-area .contact-us-content,
+.footer-area .contact-us-content {
     margin: 30px 0px;
 }
-
 
 .copyright-area {
     margin: 15px 0px 0px 0px;
