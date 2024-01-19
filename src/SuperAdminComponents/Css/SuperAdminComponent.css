@@ -75,6 +75,11 @@
     margin-top: 0px;
 }
 
+.super-admin .wrapper .main-area .main .content .card-body-area .card-body .container-body {
+    width: 100%;
+    margin: 0px 20px;
+}
+
 /*  CSS For the Registration at the Admin Side */
 
 

@@ -9,12 +9,24 @@ class services {
 
     //  Organisation Registration Related Service call
 
+    getAllApprovedClientListForHomePage(data) {
+        return axios.get(TenantManagementService + `/organisation/getapprovelistforHomePage`)
+    }
+
     registerOrganisation(data) {
         return axios.post(TenantManagementService + `/organisation/registerOrg`, data)
     }
 
     getAllClientList() {
         return axios.get(TenantManagementService + `/organisation/getalllist`)
+    }
+
+    approveClient(orgId) {
+        return axios.post(TenantManagementService + `/organisation/approve/${orgId}`)
+    }
+
+    rejectClient(orgId) {
+        return axios.post(TenantManagementService + `/organisation/reject/${orgId}`)
     }
 
     // Organisation Category Related Service call

@@ -302,9 +302,9 @@ export default function RegistrationPage() {
               Swal.fire({
                 title: "Success",
                 text: "Registration Done Successfully",
-                timer: 2000,
+                timer: 3000,
                 icon: "success",
-                showCloseButton: false
+                showConfirmButton: false,
               }).then(() => {
                 resetRegistrationDetails();
                 resetRegistrationDetailsError();
@@ -316,7 +316,7 @@ export default function RegistrationPage() {
               text: "Something went wrong, Try Later",
               timer: 3000,
               icon: "error",
-              showCloseButton: false
+              showConfirmButton: false,
             }).then(() => {
               resetRegistrationDetails();
               resetRegistrationDetailsError();

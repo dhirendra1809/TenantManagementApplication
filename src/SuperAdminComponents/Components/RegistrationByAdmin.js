@@ -140,7 +140,7 @@ export default function RegistrationByAdmin() {
         if (registrationDetails.orgEmailId === "") {
             orgEmailIdError = emptyFieldMessage;
         }
-        else if (!registrationDetails.orgName.match(orgEmailValidation)) {
+        else if (!registrationDetails.orgEmailId.match(orgEmailValidation)) {
             orgEmailIdError = orgEmailValidationMessage
         }
 
@@ -256,7 +256,7 @@ export default function RegistrationByAdmin() {
                 setRegistrationDetails((prev) => {
                     return {
                         ...prev,
-                        orgLogoFile: file
+                        orgLogoFile: file[i]
                     }
                 })
             }
@@ -273,7 +273,7 @@ export default function RegistrationByAdmin() {
                 setRegistrationDetails((prev) => {
                     return {
                         ...prev,
-                        orgSupportingDocFile: file
+                        orgSupportingDocFile: file[i]
                     }
                 })
             }
@@ -303,9 +303,9 @@ export default function RegistrationByAdmin() {
                             Swal.fire({
                                 title: "Success",
                                 text: "Registration Done Successfully",
-                                timer: 2000,
+                                timer: 3000,
                                 icon: "success",
-                                showCloseButton: false
+                                showConfirmButton: false,
                             }).then(() => {
                                 resetRegistrationDetails();
                                 resetRegistrationDetailsError();
