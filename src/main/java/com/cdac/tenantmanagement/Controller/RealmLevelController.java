@@ -93,4 +93,9 @@ public class RealmLevelController {
                 .body(keycloakAdminClientService.disableEnableRealm(realmsDtos));
     }
 
+    // @PostMapping("/getRealmsDetails")
+    // public ResponseEntity<?> getRealmDetails() {
+    //     return ResponseEntity.status(HttpStatus.OK).body();
+    // }
+
 }
